@@ -4,7 +4,7 @@ include_once("PassBookPass.class.php");
 use PassBook\Pass as ApplePass;
 
 // Create boarding pass
-$obj = new ApplePass(BOARDING_PASS,"pass.com.test.generic","EMBCMHCP7X","Shaheen Airways","Shaheen Airways Boarding Pass","Shaheen Airways","rgb(22, 55, 110)","rgb(50, 91, 185)");
+$obj = new ApplePass(BOARDING_PASS,"YOUR PASS IDENTIFIER","YOUR TEAM IDENTIFIER","Shaheen Airways","Shaheen Airways Boarding Pass","Shaheen Airways","rgb(22, 55, 110)","rgb(50, 91, 185)");
 $obj->addBarCode("SHAW72EC20I");
 // Add location
 $obj->addLocation("67.43903","61.4532322");
@@ -28,7 +28,7 @@ if($obj->generatePass("/var/www/passbook/test/","BoardingPass")){
 }
 
 // Create COUPON pass
-$obj2 = new ApplePass(COUPON,"pass.com.test.generic","EMBCMHCP7X","Super General Store","Super General Store Coupon","Super Store","rgb(22, 55, 110)","rgb(50, 91, 185)");
+$obj2 = new ApplePass(COUPON,"YOUR PASS IDENTIFIER","YOUR TEAM IDENTIFIER","Super General Store","Super General Store Coupon","Super Store","rgb(22, 55, 110)","rgb(50, 91, 185)");
 $obj2->addBarCode("SGSC00145UP");
 
 $obj2->addLocation("27.43903","69.4532322");
@@ -47,7 +47,7 @@ if($obj2->generatePass("/var/www/passbook/test/","CouponPass")){
 }
 
 // Create Event ticket pass
-$obj3 = new ApplePass(EVENT_TICKET,"pass.com.test.generic","EMBCMHCP7X","ABC Entertainment","Summer Gala","ABC Entertainment","rgb(22, 55, 110)","rgb(50, 91, 185)");
+$obj3 = new ApplePass(EVENT_TICKET,"YOUR PASS IDENTIFIER","YOUR TEAM IDENTIFIER","ABC Entertainment","Summer Gala","ABC Entertainment","rgb(22, 55, 110)","rgb(50, 91, 185)");
 $obj3->addBarCode("ETDEY01402Q");
 
 $obj3->eventPass_addHeaderInfo("Seat#","424");
@@ -69,7 +69,7 @@ if($obj3->generatePass("/var/www/passbook/test/","EventTicket")){
 }
 
 // Create Generic pass
-$obj4 = new ApplePass(GENERIC,"pass.com.test.generic","EMBCMHCP7X","Town Club","Membership pass for Town Club","Town Club","rgb(56, 190, 110)","rgb(22, 245, 105)");
+$obj4 = new ApplePass(GENERIC,"YOUR PASS IDENTIFIER","YOUR TEAM IDENTIFIER","Town Club","Membership pass for Town Club","Town Club","rgb(56, 190, 110)","rgb(22, 245, 105)");
 $obj4->addBarCode("GE001RWM8A");
 $obj4->genericPass_addHeaderInfo("ID","040");
 $obj4->genericPass_addMemberInfo("Name","John");
@@ -88,7 +88,7 @@ if($obj4->generatePass("/var/www/passbook/test/","GenericPass")){
 }
 
 // Create Store Card pass
-$obj5 = new ApplePass(STORE_CARD,"pass.com.test.generic","EMBCMHCP7X","ABC Organization","Store card for ABC Organization","ABC Corp.","rgb(112, 45, 22)","rgb(22, 200, 15)");
+$obj5 = new ApplePass(STORE_CARD,"YOUR PASS IDENTIFIER","YOUR TEAM IDENTIFIER","ABC Organization","Store card for ABC Organization","ABC Corp.","rgb(112, 45, 22)","rgb(22, 200, 15)");
 $obj5->addBarCode("G3E1R0092A");
 $obj5->storePass_addHeaderInfo("No","AS34");
 $obj5->storePass_addBalance("Balance",19.45,"USD");
